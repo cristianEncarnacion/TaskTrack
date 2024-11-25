@@ -75,7 +75,7 @@ const LandingPage = () => {
                   Gestiona tus tareas como un profesional
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  TaskMaster te ayuda a organizar tu vida, aumentar tu
+                  TaskTrack te ayuda a organizar tu vida, aumentar tu
                   productividad y alcanzar tus metas.
                 </p>
                 <button
