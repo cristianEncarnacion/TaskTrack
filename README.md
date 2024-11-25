@@ -60,7 +60,11 @@ src/
 ├── backend/         # Código relacionado con la lógica del backend
 ├── components/      # Componentes reutilizables de la interfaz
 ├── context/         # Gestión de estado global con React Context
-├── pages/           #
+├── pages/           # Páginas principales de la aplicación
+├── types/           # Definiciones de tipos y modelos TypeScript
+├── views/           # Componentes relacionados con vistas específicas
+public/              # Archivos públicos estáticos
+
 
 
 ### Como usar la aplicacion?
