@@ -23,7 +23,7 @@ const LandingPage = () => {
               <a className="mr-6 flex items-center space-x-2" href="/">
                 <MdOutlineTaskAlt className="h-6 w-6" />
                 <span className="hidden font-bold sm:inline-block">
-                  TaskMaster
+                  TaskTrack
                 </span>
               </a>
               <nav className="flex items-center space-x-6 text-sm font-medium">
