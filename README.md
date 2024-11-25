@@ -1,4 +1,4 @@
-# TaskTrackPrivate
+# TaskTrack
 
 TaskTrackPrivate es una aplicación web interactiva para la gestión de tareas con funcionalidades avanzadas, como integración con un calendario, priorización de tareas, un temporizador Pomodoro con sonido, y tareas dinámicas. Este proyecto fue desarrollado utilizando React, TypeScript y Supabase como base de datos.
 
