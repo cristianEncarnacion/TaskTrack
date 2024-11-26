@@ -39,7 +39,7 @@ TaskTrackPrivate es una aplicación web interactiva para la gestión de tareas c
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/tasktrackprivate.git
+   git clone https://github.com/tu-usuario/tasktrack.git
    cd tasktrackprivate
 
    ```
