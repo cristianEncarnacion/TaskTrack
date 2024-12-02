@@ -12,7 +12,7 @@ const Task = () => {
     date: new Date().toISOString().split("T")[0],
     complete: false,
     rango: 1,
-    RangeStatus: "Personal",
+    RangeStatus: "P1",
     SelectedColor: "bg-blue-500",
   });
   const [tasks, setTasks] = useState<Tasks[]>([]);
@@ -83,7 +83,7 @@ const Task = () => {
         date: new Date().toISOString().split("T")[0],
         complete: false,
         rango: 1,
-        RangeStatus: "Personal",
+        RangeStatus: "P1",
         SelectedColor: "bg-blue-500",
       });
       setEdit(false);
@@ -151,7 +151,7 @@ const Task = () => {
           date: new Date().toISOString().split("T")[0],
           complete: false,
           rango: 1,
-          RangeStatus: "Personal",
+          RangeStatus: "P1",
           SelectedColor: "bg-blue-500",
         });
       } catch (error) {
