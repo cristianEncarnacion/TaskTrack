@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const {
       data: { session },
     } = await supabase.auth.getSession();
-    if (session?.user.aud! === "authenticated") {
+    if (session?.user.aud !== "authenticated") {
       setError("No hay sesión activa");
       console.log(session);
     } else {
