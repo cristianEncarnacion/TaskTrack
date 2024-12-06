@@ -73,14 +73,21 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const login = async (email: string, password: string) => {
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
-    if (session?.user.aud !== "authenticated") {
-      setError("No hay sesión activa");
-      console.log(session);
-    } else {
-      let { data, error } = await supabase.auth.signInWithPassword({
+    try {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (session) {
+        setUser({
+          id: session.user.id,
+          email: session.user.email || "",
+        });
+      }
+      if (session?.user.email_confirmed_at === null) {
+        setError("Debe activar su cuenta para iniciar sesión");
+        return;
+      }
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
@@ -90,11 +97,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         return;
       }
 
-      setUser(
-        data?.user ? { id: data.user.id, email: data.user.email || "" } : null
-      );
-      setIsAuth(true);
-      navigate("/tasks");
+      if (data.user) {
+        setUser({
+          id: data.user.id,
+          email: data.user.email || "",
+        });
+        setIsAuth(true);
+        navigate("/tasks");
+      } else {
+        setError("No se pudo iniciar sesión. Verifique sus credenciales.");
+      }
+    } catch (error) {
+      console.error("Error al iniciar sesión:", error);
+      setError("Ocurrió un error inesperado. Intente nuevamente.");
     }
   };
 
